@@ -1,0 +1,47 @@
+// Program to calculate the Area of Triangle
+// Create the half variable and make it final
+// Ask users to input the base and height
+// Calculate the Area of the Triangle
+
+
+package com.DevubTech;
+
+import java.util.Scanner;
+
+public class Triangle {
+
+    public static void main(String[] args) {
+
+        //  Create half variable and Make Half final
+        final double half = 0.5;
+
+        // Create Scanner class for both inputs
+        Scanner inputBase = new Scanner(System.in);
+        Scanner inputHeight = new Scanner(System.in);
+
+        // Method for Base input
+        System.out.print("Enter the Base of the triangle: ");
+        double base = inputBase.nextDouble();
+
+
+        // Method for Height input
+        System.out.print("Enter the Height of the Triangle: ");
+        double height = inputHeight.nextDouble();
+
+
+        // Calculate the Area of the Triangle
+        double Area = half * base * height;
+        System.out.println("The Area of the triangle is: " + Area);
+
+
+
+
+
+
+
+
+
+
+
+    }
+}
