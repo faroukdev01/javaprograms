@@ -2,21 +2,24 @@
 using namespace std;  
 int main () { 
        int Scores; 
+       // Take input from the user
        cout<<"Enter a number to check grade:";    
        cin>>Scores;  
-            if (Scores >= 70)    
-            {    
+       
+            // if the score is greater than or equals 70 its A
+            if (Scores >= 70) {    
                 cout<<"A";    
-            }
-            else if(Scores >= 60 && Scores < 70){    
+            } 
+            // but if the scores is greater than or equals 60 its B
+            else if(Scores >= 60 && Scores < 70) {    
                 cout<<"B";    
             }  
-            else if (Scores < 60 && Scores >= 50)    
-            {    
+            // if the the score is less than 60 its C
+            else if (Scores < 60 && Scores >= 50) {    
                 cout<<"C";    
             }
-            else 
-            {
+            // Else display fail
+            else {
                 cout << "Fail";
             }  
-    }    
+    } 
