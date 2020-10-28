@@ -1,20 +1,16 @@
 #include <iostream>  
 using namespace std;  
 int main () { 
-       int Scores; 
-       // Take input from the user
+       int Scores;
        cout<<"Enter a number to check grade:";    
        cin>>Scores;  
-       
-            // if the score is greater than or equals 70 its A
+   
             if (Scores >= 70) {    
                 cout<<"A";    
             } 
-            // but if the scores is greater than or equals 60 its B
             else if(Scores >= 60 && Scores < 70) {    
                 cout<<"B";    
-            }  
-            // if the the score is less than 60 its C
+            } 
             else if (Scores < 60 && Scores >= 50) {    
                 cout<<"C";    
             }
