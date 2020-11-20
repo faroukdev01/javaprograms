@@ -1,0 +1,182 @@
+package com.DevelopmentHub;
+
+import java.util.Scanner;
+
+public class MobileCodes {
+    String buyDataCode;
+    String checkAccountBalance;
+    String checkDataBalance;
+    Scanner scanner = new Scanner(System.in);
+
+    MobileCodes () {
+        this.buyDataCode = "*777#";
+        this.checkAccountBalance = "#124*1#";
+        this.checkDataBalance = "*127*0#";
+    }
+
+    public static void main(String[] args) {
+        // I will add something to you later
+        MobileCodes mobileCodes = new MobileCodes();
+        mobileCodes.showCodes();
+        mobileCodes.buyData();
+        mobileCodes.dataBalance();
+        mobileCodes.balanceCheck();
+        mobileCodes.dataPlans();
+        mobileCodes.voiceOffers();
+    }
+
+
+    String showCodes() {
+        System.out.println("TO BUY DATA DIAL *777#");
+        System.out.println("TO CHECK ACCOUNT BALANCE DIAL #124*1#");
+        System.out.println("TO CHECK DATA BALANCE DIAL *127*0#");
+        System.out.println("TO EXIT TYPE 'exit'");
+        System.out.println("===========================================");
+        String inputCode = scanner.next();
+
+        do {
+
+            switch (inputCode) {
+
+                case "*777#":
+                    buyData();
+                    break;
+
+                case "#124*1#":
+                    balanceCheck();
+                    break;
+
+                case "*127*0#":
+                    dataBalance();
+                    break;
+
+                case "exit":
+                    System.out.println("GLO UNLIMITED");
+                    System.exit(0);
+
+                default:
+                    System.out.println("Invalid option!......Try again");
+                    return showCodes();
+            }
+
+        }while (!inputCode.equals(showCodes()));
+
+        return null;
+    }
+
+    // BUy data method
+    public String buyData() {
+        System.out.println("1. Data Plans");
+        System.out.println("2. Voice offers");
+        System.out.println("3. back");
+        System.out.println("4. exit");
+        System.out.println("========================================");
+        char option = scanner.next().charAt(0); // Take character as input
+
+        switch (option) {
+
+            case '1':
+                dataPlans();
+                break;
+
+            case '2':
+                voiceOffers();
+                break;
+
+            case '3':
+                return showCodes();
+
+            case '4':
+                System.out.println("Thank you");
+                System.exit(0); // Exit program if input equals 6
+                break;
+
+            default:
+                System.out.println("enter valid input!!!");
+                return buyData();
+            }
+
+        return null;
+    }
+
+    void dataBalance() {
+        System.out.println("You are on flex recharge bundle ");
+        System.out.println("please buy a different data plan");
+        System.out.println("====================================================");
+    }
+
+    void balanceCheck() {
+        System.out.println("Your current account balance is N1000.00");
+        System.out.println("====================================================");
+    }
+
+    public String dataPlans() {
+        System.out.println("1. N100 f0r 100MB");
+        System.out.println("2. N200 f0r 200MB");
+        System.out.println("3. N300 for 300MB");
+        System.out.println("4. back");
+        char choice = scanner.next().charAt(0);
+
+        switch (choice) {
+
+            case '1':
+                System.out.println("YOu have succesfully subscribed to 100MB for 1day");
+                System.out.println("====================================================");
+                break;
+
+            case '2':
+                System.out.println("YOu have succesfully subscribed to 200MB for 2days");
+                System.out.println("====================================================");
+                break;
+
+            case '3':
+                System.out.println("you succesfully subscribed to 300MB for 3days");
+                System.out.println("====================================================");
+                break;
+
+            case '4':
+                return dataPlans();
+
+            default:
+                System.out.println("choose valid option abeg!!!");
+                return dataPlans();
+        }
+        return null;
+    }
+
+    public String voiceOffers() {
+        System.out.println("1. N100 f0r 100 talktime");
+        System.out.println("2. N200 f0r 200 talktime");
+        System.out.println("3. N300 for 300 talktime");
+        System.out.println("4. back ");
+        char choice = scanner.next().charAt(0);
+
+        switch (choice) {
+
+            case '1':
+                System.out.println("YOu have succesfully subscribed to 100 talktime for 1day");
+                System.out.println("====================================================");
+                break;
+
+            case '2':
+                System.out.println("YOu have succesfully subscribed to 200 talktime for 2days");
+                System.out.println("====================================================");
+                break;
+
+            case '3':
+                System.out.println("you succesfully subscribed to 300 talktime for 3days");
+                System.out.println("====================================================");
+                break;
+
+            case '4':
+                return voiceOffers();
+
+            default:
+                System.out.println("choose valid option abeg!!!");
+                return voiceOffers();
+        }
+        return null;
+    }
+
+}
+
